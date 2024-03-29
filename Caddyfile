@@ -13,7 +13,7 @@ git.teamwaf.app {
  reverse_proxy 10.0.0.243:80
 }
 
-test.teamwaf.app {
+test.fisa.club {
  encode gzip
  reverse_proxy 10.0.0.243:80
 }
