@@ -4,6 +4,19 @@ wiki.teamwaf.app {
 }
 
 git.fisa.club {
- encode gzip
  reverse_proxy 10.0.0.10:8181
+}
+
+
+dock.teamwaf.app {
+ encode gzip
+    @allowed {
+        remote_ip 118.131.63.236 10.0.0.1
+    }
+
+    reverse_proxy @allowed 10.0.0.250:5001 {
+        
+    }
+
+    respond "Access denied" 403
 }
