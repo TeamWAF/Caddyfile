@@ -8,7 +8,7 @@ dock.teamwaf.app {
         remote_ip forwarded 118.131.63.236 113.73.5.126
     }
     handle @teammember {
-        reverse_proxy /* http://172.100.1.1:5001/
+        reverse_proxy /* 172.100.1.1:5001
     }
     respond "Access Denied" 403
 }
