@@ -23,10 +23,3 @@ fw.teamwaf.app {
     respond "Access Denied" 403
 }
 
-
-wiki.teamwaf.app {
- encode gzip
- reverse_proxy 172.100.1.11:3000
-}
-
-
