@@ -4,21 +4,22 @@ wiki.teamwaf.app {
 }
 
 
-access.teamwaf.app {
+(teammember) {
     @teammember {
         remote_ip forwarded 118.131.63.236 113.73.5.126
     }
+}
+
+access.teamwaf.app {
+    import teammember
     handle @teammember {
         reverse_proxy /* 172.100.1.1:8080
     }
     respond "Access Denied" 403
 }
 
-
 dock.teamwaf.app {
-    @teammember {
-        remote_ip forwarded 118.131.63.236 113.73.5.126
-    }
+    import teammember
     handle @teammember {
         reverse_proxy /* 172.100.1.1:5001
     }
@@ -26,12 +27,11 @@ dock.teamwaf.app {
 }
 
 fw.teamwaf.app {
-    @teammember {
-        remote_ip forwarded 118.131.63.236 113.73.5.126
-    }
+    import teammember
     handle @teammember {
         reverse_proxy /* 172.100.0.1
     }
     respond "Access Denied" 403
 }
+
 
