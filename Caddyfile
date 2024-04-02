@@ -18,7 +18,7 @@ fw.teamwaf.app {
         remote_ip forwarded 118.131.63.236 113.73.5.126
     }
     handle @teammember {
-        reverse_proxy /* 172.100.0.1:443
+        reverse_proxy /* 172.100.0.1
     }
     respond "Access Denied" 403
 }
