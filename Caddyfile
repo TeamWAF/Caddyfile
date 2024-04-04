@@ -18,12 +18,9 @@ access.teamwaf.app {
     respond "Access Denied" 403
 }
 
-test.teamwaf.app {
-    import teammember
-    handle @teammember {
-        reverse_proxy /* 172.100.0.11:8080
-    }
-    respond "Access Denied" 403
+test.teamwaf.app
+ encode gzip
+ reverse_proxy /* 172.100.0.11:8080
 }
 
 dock.teamwaf.app {
