@@ -48,4 +48,7 @@ fw.teamwaf.app {
     respond "Access Denied" 403
 }
 
-
+chat.teamwaf.app
+ encode gzip
+ reverse_proxy /* 173.100.0.1:9999
+}
