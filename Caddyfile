@@ -26,9 +26,14 @@ dbadmin.teamwaf.app {
     respond "Access Denied" 403
 }
 
+f.teamwaf.app {
+    encode gzip
+    reverse_proxy /* 173.100.0.1:19999
+}
+
+
 test.teamwaf.app {
     encode gzip
-    reverse_proxy /attachment/* 173.100.0.1:19999
     reverse_proxy /* 173.100.0.1:8080
 }
 
