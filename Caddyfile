@@ -28,7 +28,7 @@ dbadmin.teamwaf.app {
 
 test.teamwaf.app {
     encode gzip
-    reverse_proxy /attachment/* 173.100.0.1:19999/attachment/
+    reverse_proxy /attachment/* 173.100.0.1:19999
     reverse_proxy /* 173.100.0.1:8080
 }
 
